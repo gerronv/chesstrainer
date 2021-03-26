@@ -7,18 +7,27 @@ var color_2 = 'grey';
 var black_pawn_img = 'black_pawn.png';
 var black_rook_img = 'black_rook.png';
 var black_bishop_img = 'black_bishop.png';
-var WHITE_PAWN = 0;
-var WHITE_ROOK = 1;
-var WHITE_BISHOP = 2;
-var WHITE_KNIGHT = 3;
-var WHITE_QUEEN = 4;
-var WHITE_KING = 5;
-var BLACK_PAWN = 6;
-var BLACK_ROOK = 7;
-var BLACK_BISHOP = 8;
-var BLACK_KNIGHT = 9;
-var BLACK_QUEEN = 10;
-var BLACK_KING = 11;
+var black_queen_img = 'black_queen.png';
+var black_king_img = 'black_king.png';
+var black_knight_img = 'black_knight.png';
+var white_rook_img = 'white_rook.png';
+var white_bishop_img = 'white_bishop.png';
+var white_queen_img = 'white_queen.png';
+var white_king_img = 'white_king.png';
+var white_knight_img = 'white_knight.png';
+var white_pawn_img = 'white_pawn.png';
+var WHITE_PAWN = 1;
+var WHITE_ROOK = 2;
+var WHITE_BISHOP = 3;
+var WHITE_KNIGHT = 4;
+var WHITE_QUEEN = 5;
+var WHITE_KING = 6;
+var BLACK_PAWN = 7;
+var BLACK_ROOK = 8;
+var BLACK_BISHOP = 9;
+var BLACK_KNIGHT = 10;
+var BLACK_QUEEN = 11;
+var BLACK_KING = 12;
 
 //The state of the board is stored here. This will be updated when we download a 
 //puzzle to the initial state of the puzzle. We will also render the board from 
@@ -26,8 +35,8 @@ var BLACK_KING = 11;
 var chess_board = [[[BLACK_ROOK],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_ROOK]], 
                    [[BLACK_KNIGHT],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_KNIGHT]],
                    [[BLACK_BISHOP],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_BISHOP]],
-                   [[BLACK_KING],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_KING]],
                    [[BLACK_QUEEN],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_QUEEN]],
+                   [[BLACK_KING],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_KING]],
                    [[BLACK_BISHOP],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_BISHOP]],
                    [[BLACK_KNIGHT],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_KNIGHT]],
                    [[BLACK_ROOK],[BLACK_PAWN],[],[],[],[],[WHITE_PAWN],[WHITE_ROOK]]];
@@ -79,6 +88,33 @@ function img_from_piece(piece){
     }
     if (piece == BLACK_BISHOP){
         img = black_bishop_img;
+    }
+    if (piece == BLACK_QUEEN){
+        img = black_queen_img;
+    }
+    if (piece == BLACK_KING){
+        img = black_king_img;
+    }
+    if (piece == BLACK_KNIGHT){
+        img = black_knight_img;
+    }
+    if (piece == WHITE_ROOK){
+        img = white_rook_img;
+    }
+    if (piece == WHITE_BISHOP){
+        img = white_bishop_img;
+    }
+    if (piece == WHITE_QUEEN){
+        img = white_queen_img;
+    }
+    if (piece == WHITE_KING){
+        img = white_king_img;
+    }
+    if (piece == WHITE_KNIGHT){
+        img = white_knight_img;
+    }
+    if (piece == WHITE_PAWN){
+        img = white_pawn_img;
     }
     return img;
 }
